@@ -15,8 +15,7 @@ contract Deploy is Script {
         vm.startBroadcast(pk);
 
         address proxy = Upgrades.deployUUPSProxy(
-            "LabTokenV1.sol",
-            abi.encodeCall(LabTokenV1.initialize, (deployer, initialSupply))
+            "LabTokenV1.sol", abi.encodeCall(LabTokenV1.initialize, (deployer, initialSupply))
         );
 
         vm.stopBroadcast();

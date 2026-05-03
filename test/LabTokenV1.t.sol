@@ -14,10 +14,8 @@ contract LabTokenV1Test is Test {
     uint256 constant INITIAL_SUPPLY = 1_000_000 ether;
 
     function setUp() public {
-        proxy = Upgrades.deployUUPSProxy(
-            "LabTokenV1.sol",
-            abi.encodeCall(LabTokenV1.initialize, (owner, INITIAL_SUPPLY))
-        );
+        proxy =
+            Upgrades.deployUUPSProxy("LabTokenV1.sol", abi.encodeCall(LabTokenV1.initialize, (owner, INITIAL_SUPPLY)));
         token = LabTokenV1(proxy);
     }
 
