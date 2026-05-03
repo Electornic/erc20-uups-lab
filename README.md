@@ -7,6 +7,7 @@ A learning project for upgradeable ERC20 tokens using the **UUPS proxy pattern**
 [![OpenZeppelin](https://img.shields.io/badge/OpenZeppelin-5.6.1-4E5EE4?logo=openzeppelin&logoColor=white)](https://docs.openzeppelin.com/contracts/5.x/)
 [![Pattern](https://img.shields.io/badge/Pattern-UUPS-blueviolet)](https://eips.ethereum.org/EIPS/eip-1822)
 [![Network](https://img.shields.io/badge/Network-Sepolia-CE412B)](https://sepolia.etherscan.io)
+[![CI](https://github.com/Electornic/erc20-uups-lab/actions/workflows/test.yml/badge.svg)](https://github.com/Electornic/erc20-uups-lab/actions/workflows/test.yml)
 [![Tests](https://img.shields.io/badge/tests-26%2F26%20passing-brightgreen)](#testing)
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 
@@ -95,7 +96,7 @@ All four were granted to the deployer at upgrade time. They can be redistributed
 ### Install
 
 ```bash
-git clone <this-repo>
+git clone --recurse-submodules https://github.com/Electornic/erc20-uups-lab.git
 cd erc20-uups-lab
 forge install                # pulls submodules
 cp .env.example .env         # then fill in values
